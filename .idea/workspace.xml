@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08551f5-d334-438f-b593-1a9e3d4e9e8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoDigital.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoFisico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoDigital.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoDigital.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoFisico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/JuegoFisico.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/Videojuego.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/base/Videojuego.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +34,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="212" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ/EJ07 - ModeloVistaControlador/VehiculosMVC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,11 +47,11 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\gerbo\Documents\2º Curso\Acceso a Datos\TiendaVideojuegosMVC\src\com\luciager\tiendavideojuegosmvc\gui" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\gerbo\Documents\2º Curso\Acceso a Datos\TiendaVideojuegosMVC\libs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gerbo\Documents\2º Curso\Acceso a Datos\TiendaVideojuegosMVC\src\com\luciager\tiendavideojuegosmvc\gui" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -77,7 +77,8 @@
       <option name="presentableId" value="Default" />
       <updated>1792653897449</updated>
       <workItem from="1792653899667" duration="2228000" />
-      <workItem from="1792747319513" duration="1866000" />
+      <workItem from="1792747319513" duration="2582000" />
+      <workItem from="1793084646968" duration="3626000" />
     </task>
     <servers />
   </component>
