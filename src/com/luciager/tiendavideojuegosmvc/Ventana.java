@@ -2,24 +2,29 @@ package com.luciager.tiendavideojuegosmvc;
 
 import com.github.lgooddatepicker.components.DatePicker;
 import com.luciager.tiendavideojuegosmvc.base.Videojuego;
+import sun.awt.windows.WPrinterJob;
 
 import javax.swing.*;
+import java.util.LinkedList;
 
 public class Ventana {
     private JPanel panel1;
     private JRadioButton juegoFisicoRadioButton;
     private JRadioButton juegoDigitalRadioButton;
     private JTextField nombreTxt;
-    private JTextField precioTxt;
-    private JTextField generoTxt;
     private JTextField plataformaTxt;
-    private JLabel stockDescargaLbl;
-    private JTextField stockDescargaTxt;
+    private JLabel estadoDescargaLbl;
     private JButton nuevoButton;
     private JButton exportarButton;
     private JButton importarButton;
     private JList list1;
     private DatePicker fechaCompraDPicker;
+    private JLabel numDiscosDescargaLbl;
+    private JTextArea observacionesTxtArea;
+    private JComboBox estadoComboBox;
+    private JComboBox generoComboBox;
+    private JTextField numDiscosTxt;
+    private JTextField precioTxt;
 
     //creado por mi
     public JFrame frame;

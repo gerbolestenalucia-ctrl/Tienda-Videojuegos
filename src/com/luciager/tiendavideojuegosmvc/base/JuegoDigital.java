@@ -9,8 +9,8 @@ public class JuegoDigital extends Videojuego {
         super();
     }
 
-    public JuegoDigital(String nombre, float precio, String genero, String plataforma, LocalDate fechaCompra, double tamanoDescarga) {
-        super(nombre, precio, genero, plataforma, fechaCompra);
+    public JuegoDigital(String nombre, String genero, String plataforma, LocalDate fechaCompra, float precio, String observaciones, double tamanoDescarga) {
+        super(nombre, genero, plataforma, fechaCompra, precio, observaciones);
         this.tamanoDescarga = tamanoDescarga;
     }
 
@@ -24,6 +24,6 @@ public class JuegoDigital extends Videojuego {
 
     @Override
     public String toString() {
-        return "JuegoDigital: " + getNombre() + " " + getPrecio() + " " + getPlataforma();
+        return "JuegoDigital: " + getNombre() + " " + getPlataforma() + " " + getPrecio() + " " + getObservaciones();
     }
 }

@@ -4,21 +4,23 @@ import java.time.LocalDate;
 
 public abstract class Videojuego {
     private String nombre;
-    private float precio;
     private String genero;
     private String plataforma;
     private LocalDate fechaCompra;
+    private float precio;
+    private String observaciones;
 
     public Videojuego() {
 
     }
 
-    public Videojuego(String nombre, float precio, String genero, String plataforma, LocalDate fechaCompra) {
+    public Videojuego(String nombre, String genero, String plataforma, LocalDate fechaCompra, float precio, String observaciones) {
         this.nombre = nombre;
-        this.precio = precio;
         this.genero = genero;
         this.plataforma = plataforma;
         this.fechaCompra = fechaCompra;
+        this.precio = precio;
+        this.observaciones = observaciones;
     }
 
     public String getNombre() {
@@ -27,14 +29,6 @@ public abstract class Videojuego {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public float getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(float precio) {
-        this.precio = precio;
     }
 
     public String getGenero() {
@@ -59,5 +53,21 @@ public abstract class Videojuego {
 
     public void setFechaCompra(LocalDate fechaCompra) {
         this.fechaCompra = fechaCompra;
+    }
+
+    public float getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(float precio) {
+        this.precio = precio;
+    }
+
+    public String getObservaciones() {
+        return observaciones;
+    }
+
+    public void setObservaciones(String observaciones) {
+        this.observaciones = observaciones;
     }
 }
