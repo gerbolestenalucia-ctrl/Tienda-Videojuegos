@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.luciager.tiendavideojuegosmvc.Ventana">
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.luciager.tiendavideojuegosmvc.gui.Ventana">
   <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="FormLayout">
     <rowspec value="center:30px:noGrow"/>
     <rowspec value="top:4dlu:noGrow"/>
@@ -118,7 +118,7 @@
           <text value="Fecha Compra"/>
         </properties>
       </component>
-      <component id="e19ef" class="javax.swing.JLabel" binding="estadoDescargaLbl">
+      <component id="e19ef" class="javax.swing.JLabel" binding="estadoLbl">
         <constraints>
           <grid row="16" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
           <forms/>
@@ -199,11 +199,7 @@
           <forms/>
         </constraints>
         <properties>
-          <model>
-            <item value="Elige un tipo de estado:"/>
-            <item value="Nuevo"/>
-            <item value="Segunda Mano"/>
-          </model>
+          <model/>
           <toolTipText value=""/>
         </properties>
       </component>
@@ -213,19 +209,7 @@
           <forms/>
         </constraints>
         <properties>
-          <model>
-            <item value="Acción"/>
-            <item value="Aventura"/>
-            <item value="RPG"/>
-            <item value="Survival Horror"/>
-            <item value="Estrategia"/>
-            <item value="Deportes"/>
-            <item value="Carreras"/>
-            <item value="Puzzle"/>
-            <item value="Mundo Abierto"/>
-            <item value="Battle Royale"/>
-            <item value="Lucha"/>
-          </model>
+          <model/>
         </properties>
       </component>
       <component id="e4e2e" class="javax.swing.JLabel">
@@ -255,7 +239,7 @@
           <text value="Número Discos"/>
         </properties>
       </component>
-      <component id="1ab4f" class="javax.swing.JTextField" binding="numDiscosTxt">
+      <component id="1ab4f" class="javax.swing.JTextField" binding="numDiscosDescargaTxt">
         <constraints>
           <grid row="14" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="150" height="-1"/>
