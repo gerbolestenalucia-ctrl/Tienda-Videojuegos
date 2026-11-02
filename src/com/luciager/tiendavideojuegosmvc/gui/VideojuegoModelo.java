@@ -15,11 +15,31 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class VideojuegoModelo {
+    public void guardarTexto(File fichero, String texto) throws FileNotFoundException {
+        PrintWriter escritor = new PrintWriter(fichero);
+        escritor.println(texto);
+        escritor.close();
+    }
+
+    public String cargarTexto(File fichero) throws FileNotFoundException {
+        Scanner lector = new Scanner(fichero);
+        StringBuilder textoLeido = new StringBuilder();
+
+        while (lector.hasNextLine()) {
+            textoLeido.append(lector.nextLine());
+        }
+        lector.close();
+        return textoLeido.toString();
+    }
+
     private ArrayList<Videojuego> listaVideojuegos;
 
     public VideojuegoModelo() {
@@ -47,6 +67,10 @@ public class VideojuegoModelo {
             }
         }
         return false;
+    }
+
+    public void eliminarVideojuego(Videojuego videojuego) {
+        listaVideojuegos.remove(videojuego);
     }
 
     public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException, IOException, SAXException {
@@ -105,7 +129,7 @@ public class VideojuegoModelo {
 
             //ponemos el campo diferente
             if (unVideojuego instanceof JuegoFisico) {
-                nodoDatos = documento.createElement("Número Discos");
+                nodoDatos = documento.createElement("numDiscos");
                 nodoVideojuego.appendChild(nodoDatos);
                 texto = documento.createTextNode(String.valueOf(((JuegoFisico) unVideojuego).getNumDiscos()));
                 nodoDatos.appendChild(texto);
@@ -142,39 +166,36 @@ public class VideojuegoModelo {
         //el * es para coger todos los elementos de la lista
         NodeList listaElementos = documento.getElementsByTagName("*");
         for (int i = 0; i < listaElementos.getLength(); i++) {
-            Element nodoVideojuegosFisicos = (Element) listaElementos.item(i);
+            Element nodoVideojuegos = (Element) listaElementos.item(i);
 
-            JuegoFisico juego = new JuegoFisico();
+            if (nodoVideojuegos.getTagName().equalsIgnoreCase("JuegoFisico")) {
+                nuevoJuegoFisico = new JuegoFisico();
 
-            juego.setNombre(nodoVideojuegosFisicos.getElementsByTagName("nombre").item(0).getTextContent());
-            juego.setGenero(nodoVideojuegosFisicos.getElementsByTagName("genero").item(1).getTextContent());
-            juego.setPlataforma(nodoVideojuegosFisicos.getElementsByTagName("plataforma").item(2).getTextContent());
-            juego.setFechaCompra(LocalDate.parse(nodoVideojuegosFisicos.getElementsByTagName("fechaCompra").item(3).getTextContent()));
-            juego.setPrecio(Float.parseFloat(nodoVideojuegosFisicos.getElementsByTagName("precio").item(4).getTextContent()));
-            juego.setObservaciones(nodoVideojuegosFisicos.getElementsByTagName("observaciones").item(5).getTextContent());
-            juego.setNumDiscos(Integer.parseInt(nodoVideojuegosFisicos.getElementsByTagName("numDiscos").item(6).getTextContent()));
-            juego.setEstado(nodoVideojuegosFisicos.getElementsByTagName("estado").item(7).getTextContent());
+                nuevoJuegoFisico.setNombre(nodoVideojuegos.getChildNodes().item(0).getTextContent());
+                nuevoJuegoFisico.setGenero(nodoVideojuegos.getChildNodes().item(1).getTextContent());
+                nuevoJuegoFisico.setPlataforma(nodoVideojuegos.getChildNodes().item(2).getTextContent());
+                nuevoJuegoFisico.setFechaCompra(LocalDate.parse(nodoVideojuegos.getChildNodes().item(3).getTextContent()));
+                nuevoJuegoFisico.setPrecio(Float.parseFloat(nodoVideojuegos.getChildNodes().item(4).getTextContent()));
+                nuevoJuegoFisico.setObservaciones(nodoVideojuegos.getChildNodes().item(5).getTextContent());
+                nuevoJuegoFisico.setNumDiscos(Integer.parseInt(nodoVideojuegos.getChildNodes().item(6).getTextContent()));
+                nuevoJuegoFisico.setEstado(nodoVideojuegos.getChildNodes().item(7).getTextContent());
 
-            listaVideojuegos.add(juego);
-        }
+                listaVideojuegos.add(nuevoJuegoFisico);
+            } else {
+                if (nodoVideojuegos.getTagName().equalsIgnoreCase("JuegoDigital")) {
+                    nuevoJuegoDigital = new JuegoDigital();
 
-        NodeList juegosDigitales = documento.getElementsByTagName("JuegoDigital");
+                    nuevoJuegoDigital.setNombre(nodoVideojuegos.getChildNodes().item(0).getTextContent());
+                    nuevoJuegoDigital.setGenero(nodoVideojuegos.getChildNodes().item(1).getTextContent());
+                    nuevoJuegoDigital.setPlataforma(nodoVideojuegos.getChildNodes().item(2).getTextContent());
+                    nuevoJuegoDigital.setFechaCompra(LocalDate.parse(nodoVideojuegos.getChildNodes().item(3).getTextContent()));
+                    nuevoJuegoDigital.setPrecio(Float.parseFloat(nodoVideojuegos.getChildNodes().item(4).getTextContent()));
+                    nuevoJuegoDigital.setObservaciones(nodoVideojuegos.getChildNodes().item(5).getTextContent());
+                    nuevoJuegoDigital.setTamanoDescarga(Double.parseDouble(nodoVideojuegos.getChildNodes().item(6).getTextContent()));
 
-        for (int i = 0; i < juegosDigitales.getLength(); i++) {
-
-            Element nodoVideojuegosDigitales = (Element) juegosDigitales.item(i);
-
-            JuegoDigital juego = new JuegoDigital();
-
-            juego.setNombre(nodoVideojuegosDigitales.getElementsByTagName("nombre").item(0).getTextContent());
-            juego.setGenero(nodoVideojuegosDigitales.getElementsByTagName("genero").item(1).getTextContent());
-            juego.setPlataforma(nodoVideojuegosDigitales.getElementsByTagName("plataforma").item(2).getTextContent());
-            juego.setFechaCompra(LocalDate.parse(nodoVideojuegosDigitales.getElementsByTagName("fechaCompra").item(3).getTextContent()));
-            juego.setPrecio(Float.parseFloat(nodoVideojuegosDigitales.getElementsByTagName("precio").item(4).getTextContent()));
-            juego.setObservaciones(nodoVideojuegosDigitales.getElementsByTagName("observaciones").item(5).getTextContent());
-            juego.setTamanoDescarga(Double.parseDouble(nodoVideojuegosDigitales.getElementsByTagName("tamanoDescarga").item(6).getTextContent()));
-
-            listaVideojuegos.add(juego);
+                    listaVideojuegos.add(nuevoJuegoDigital);
+                }
+            }
         }
     }
 }

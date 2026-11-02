@@ -37,7 +37,6 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
         addActionListener(this);
         addListSelectionListener(this);
         addWindowListener(this);
-
     }
 
     //sirve para validar el formulario
@@ -74,6 +73,8 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
         vista.nuevoButton.addActionListener(listener);
         vista.importarButton.addActionListener(listener);
         vista.exportarButton.addActionListener(listener);
+        vista.buscarButton.addActionListener(listener);
+        vista.eliminarButton.addActionListener(listener);
         vista.juegoFisicoRadioButton.addActionListener(listener);
         vista.juegoDigitalRadioButton.addActionListener(listener);
     }
@@ -109,7 +110,7 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
             case "Nuevo":
                 if (camposVacios()) {
                     Util.mensajeError("Los siguientes campos no pueden estar vacios : \nNombre\nGenero" +
-                            "\nPlataforma\nFecha Compra\nPrecio\nObservaciones" + "\n" + vista.numDiscosDescargaLbl.getText());
+                            "\nPlataforma\nFecha Compra\nPrecio\nObservaciones" + "\n" + vista.numDiscosDescargaLbl.getText() + "\n" + vista.estadoLbl.getText());
                     break;
                 }
                 if (modelo.existeVideojuego(vista.nombreTxt.getText())) {
@@ -162,8 +163,34 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
                     }
                 }
                 break;
+            case "Eliminar":
+                if (vista.list1.getSelectedValue() == null) {
+                    Util.mensajeError("Selecciona un videojuego");
+                    break;
+                }
+                Videojuego videojuego = (Videojuego) vista.list1.getSelectedValue();
+                modelo.eliminarVideojuego(videojuego);
+                refrescar();
+                break;
+            case "Buscar":
+                String nombre = vista.buscarTxt.getText();
+
+                boolean encontrado = false;
+
+                for (Videojuego videojuego1 : modelo.obtenerVideojuegos()) {
+                    if (videojuego1.getNombre().equalsIgnoreCase(nombre)) {
+                        vista.list1.setSelectedValue(videojuego1, true);
+                        encontrado = true;
+                        break;
+                    }
+                }
+                if (!encontrado) {
+                    Util.mensajeError("No se ha encontrado ningun videojuego");
+                }
+                break;
             case "JuegoFisico":
                 vista.numDiscosDescargaLbl.setText("Número Discos");
+                vista.estadoLbl.setText("Estado");
                 vista.estadoComboBox.setVisible(true);
                 vista.estadoLbl.setVisible(true);
                 vista.numDiscosDescargaTxt.setVisible(true);

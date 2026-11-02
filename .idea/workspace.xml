@@ -2,20 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d08551f5-d334-438f-b593-1a9e3d4e9e8a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/videojuegos.conf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/Principal.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/Principal.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/Ventana.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/JuegoDigital.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/JuegoDigital.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/JuegoFisico.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/JuegoFisico.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/Videojuego.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/base/Videojuego.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Principal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Principal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/videojuegos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/videojuegos.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,13 +36,14 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="298" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ/EJ07 - ModeloVistaControlador/CocheComboBoxXML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../IntelliJ/EJ07 - ModeloVistaControlador/EditorMVC" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -115,7 +108,8 @@
       <workItem from="1793178221270" duration="2526000" />
       <workItem from="1793259463247" duration="7973000" />
       <workItem from="1793302389402" duration="835000" />
-      <workItem from="1793533322119" duration="10219000" />
+      <workItem from="1793533322119" duration="10451000" />
+      <workItem from="1793635684399" duration="12375000" />
     </task>
     <servers />
   </component>
