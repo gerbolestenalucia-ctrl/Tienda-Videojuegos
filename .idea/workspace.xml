@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="TiendaVideojuegosMVC:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="d08551f5-d334-438f-b593-1a9e3d4e9e8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/Ventana.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/Ventana.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/TiendaVideojuegosMVC/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/Ventana.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoControlador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/luciager/tiendavideojuegosmvc/gui/VideojuegoModelo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/videojuegos.conf" beforeDir="false" afterPath="$PROJECT_DIR$/videojuegos.conf" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,7 +37,7 @@
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="267" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -47,9 +45,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -115,7 +113,7 @@
       <workItem from="1793635684399" duration="12651000" />
       <workItem from="1793689533307" duration="9480000" />
       <workItem from="1793706589141" duration="927000" />
-      <workItem from="1793733802037" duration="4018000" />
+      <workItem from="1793733802037" duration="5308000" />
     </task>
     <servers />
   </component>
