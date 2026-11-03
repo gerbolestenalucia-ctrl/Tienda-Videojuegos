@@ -73,6 +73,10 @@ public class VideojuegoModelo {
         listaVideojuegos.remove(videojuego);
     }
 
+    public void editarVideojuego(Videojuego videojuego) {
+
+    }
+
     public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException, IOException, SAXException {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = factory.newDocumentBuilder();

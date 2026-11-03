@@ -41,13 +41,13 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
 
     //sirve para validar el formulario
     private boolean camposVacios() {
-        if (vista.numDiscosDescargaTxt.getText().isEmpty() || vista.nombreTxt.getText().isEmpty()
+          if (vista.numDiscosDescargaTxt.getText().isEmpty() || vista.nombreTxt.getText().isEmpty()
                 || vista.generoComboBox.getSelectedIndex() == 0 || vista.plataformaTxt.getText().isEmpty()
                 || vista.fechaCompraDPicker.getText().isEmpty() || vista.precioTxt.getText().isEmpty()
                 || vista.observacionesTxtArea.getText().isEmpty()) {
             return true;
         }
-        return false;
+    return false;
     }
 
     //se vacia automaticamente cuando mandas el formulario
@@ -110,7 +110,8 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
             case "Nuevo":
                 if (camposVacios()) {
                     Util.mensajeError("Los siguientes campos no pueden estar vacios : \nNombre\nGenero" +
-                            "\nPlataforma\nFecha Compra\nPrecio\nObservaciones" + "\n" + vista.numDiscosDescargaLbl.getText() + "\n" + vista.estadoLbl.getText());
+                            "\nPlataforma\nFecha Compra\nPrecio\nObservaciones" + "\n" + vista.numDiscosDescargaLbl.getText()
+                            + "\n" + vista.estadoLbl.getText());
                     break;
                 }
                 if (modelo.existeVideojuego(vista.nombreTxt.getText())) {
@@ -194,18 +195,12 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
                 vista.estadoComboBox.setVisible(true);
                 vista.estadoLbl.setVisible(true);
                 vista.numDiscosDescargaTxt.setVisible(true);
-
-                vista.frame.revalidate();
-                vista.frame.repaint();
                 break;
             case "JuegoDigital":
                 vista.numDiscosDescargaLbl.setText("Descarga");
                 vista.estadoComboBox.setVisible(false);
                 vista.estadoLbl.setVisible(false);
                 vista.numDiscosDescargaTxt.setVisible(true);
-
-                vista.frame.revalidate();
-                vista.frame.repaint();
                 break;
         }
     }

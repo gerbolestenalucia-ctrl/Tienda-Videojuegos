@@ -5,6 +5,7 @@ import com.luciager.tiendavideojuegosmvc.base.Videojuego;
 import sun.awt.windows.WPrinterJob;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -46,12 +47,19 @@ public class Ventana {
         frame.setVisible(true);
         initComponents();
 
+        //tamaño de la ventana
+        frame.setSize(500, 630);
+
+        //borde del panel
+        panel1.setBorder(new EmptyBorder(12, 12, 12, 12));
+
         //color de los botones
         nuevoButton.setBackground(Color.BLUE);
         exportarButton.setBackground(Color.BLUE);
         importarButton.setBackground(Color.BLUE);
         buscarButton.setBackground(Color.BLUE);
         eliminarButton.setBackground(Color.BLUE);
+        editarButton.setBackground(Color.BLUE);
 
         //color de la letra
         nuevoButton.setForeground(Color.WHITE);
@@ -59,6 +67,7 @@ public class Ventana {
         exportarButton.setForeground(Color.WHITE);
         buscarButton.setForeground(Color.WHITE);
         eliminarButton.setForeground(Color.WHITE);
+        editarButton.setForeground(Color.WHITE);
 
         //fuente de los botones
         nuevoButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
@@ -66,6 +75,7 @@ public class Ventana {
         importarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
         buscarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
         eliminarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
+        editarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
 
         //fondo
         panel1.setBackground(new Color(173, 216, 230));
