@@ -75,6 +75,7 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
         vista.exportarButton.addActionListener(listener);
         vista.buscarButton.addActionListener(listener);
         vista.eliminarButton.addActionListener(listener);
+        vista.editarButton.addActionListener(listener);
         vista.juegoFisicoRadioButton.addActionListener(listener);
         vista.juegoDigitalRadioButton.addActionListener(listener);
     }
@@ -121,7 +122,7 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
                 if (vista.juegoFisicoRadioButton.isSelected()) {
                     modelo.altaJuegoFisico(vista.nombreTxt.getText(), vista.generoComboBox.getSelectedItem().toString(), vista.plataformaTxt.getText(),
                             vista.fechaCompraDPicker.getDate(), Float.parseFloat(vista.precioTxt.getText()), vista.observacionesTxtArea.getText(),
-                            Integer.parseInt(vista.numDiscosDescargaTxt.getText()), vista.estadoComboBox.getSelectedItem().toString());
+                            Integer.parseInt(vista.numDiscosDescargaTxt.getText()), vista.estadoLbl.getText());
                 } else {
                     modelo.altaJuegoDigital(vista.nombreTxt.getText(), vista.generoComboBox.getSelectedItem().toString(), vista.plataformaTxt.getText(),
                             vista.fechaCompraDPicker.getDate(), Float.parseFloat(vista.precioTxt.getText()), vista.observacionesTxtArea.getText(),
@@ -188,6 +189,27 @@ public class VideojuegoControlador implements ActionListener, ListSelectionListe
                 if (!encontrado) {
                     Util.mensajeError("No se ha encontrado ningun videojuego");
                 }
+                break;
+            case "Editar":
+                int videojuegoModificar = vista.list1.getSelectedIndex();
+
+                if (videojuegoModificar < 0) {
+                    Util.mensajeError("Selecciona un videojuego");
+                    break;
+                }
+                Videojuego modificar;
+                if (vista.juegoFisicoRadioButton.isSelected()) {
+                    modificar = new JuegoFisico(vista.nombreTxt.getText(), vista.generoComboBox.getSelectedItem().toString(),
+                            vista.plataformaTxt.getText(), vista.fechaCompraDPicker.getDate(), Float.parseFloat(vista.precioTxt.getText()),
+                            vista.observacionesTxtArea.getText(), Integer.parseInt(vista.numDiscosDescargaTxt.getText()),
+                            vista.estadoComboBox.getSelectedItem().toString());
+                } else {
+                    modificar = new JuegoDigital(vista.nombreTxt.getText(), vista.generoComboBox.getSelectedItem().toString(),
+                            vista.plataformaTxt.getText(), vista.fechaCompraDPicker.getDate(), Float.parseFloat(vista.precioTxt.getText()),
+                            vista.observacionesTxtArea.getText(), Double.parseDouble(vista.numDiscosDescargaTxt.getText()));
+                }
+                modelo.editarVideojuego(videojuegoModificar, modificar);
+                refrescar();
                 break;
             case "JuegoFisico":
                 vista.numDiscosDescargaLbl.setText("Número Discos");

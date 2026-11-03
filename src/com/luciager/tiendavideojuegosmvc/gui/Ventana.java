@@ -60,6 +60,8 @@ public class Ventana {
         buscarButton.setBackground(Color.BLUE);
         eliminarButton.setBackground(Color.BLUE);
         editarButton.setBackground(Color.BLUE);
+        juegoFisicoRadioButton.setBackground(Color.BLUE);
+        juegoDigitalRadioButton.setBackground(Color.BLUE);
 
         //color de la letra
         nuevoButton.setForeground(Color.WHITE);
@@ -68,14 +70,8 @@ public class Ventana {
         buscarButton.setForeground(Color.WHITE);
         eliminarButton.setForeground(Color.WHITE);
         editarButton.setForeground(Color.WHITE);
-
-        //fuente de los botones
-        nuevoButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        exportarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        importarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        buscarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        eliminarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
-        editarButton.setFont(new Font("Sans Serif", Font.BOLD, 15));
+        juegoFisicoRadioButton.setForeground(Color.WHITE);
+        juegoDigitalRadioButton.setForeground(Color.WHITE);
 
         //fondo
         panel1.setBackground(new Color(173, 216, 230));

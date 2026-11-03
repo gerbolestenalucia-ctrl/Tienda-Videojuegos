@@ -73,8 +73,8 @@ public class VideojuegoModelo {
         listaVideojuegos.remove(videojuego);
     }
 
-    public void editarVideojuego(Videojuego videojuego) {
-
+    public void editarVideojuego(int videojuegoModificar, Videojuego modificar) {
+        listaVideojuegos.set(videojuegoModificar, modificar);
     }
 
     public void exportarXML(File fichero) throws ParserConfigurationException, TransformerException, IOException, SAXException {

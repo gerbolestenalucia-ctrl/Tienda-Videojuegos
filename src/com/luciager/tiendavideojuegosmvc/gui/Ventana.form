@@ -39,7 +39,7 @@
     <colspec value="fill:140px:noGrow"/>
     <colspec value="left:4dlu:noGrow"/>
     <constraints>
-      <xy x="20" y="20" width="443" height="568"/>
+      <xy x="20" y="20" width="443" height="579"/>
     </constraints>
     <properties/>
     <border type="none"/>
@@ -142,6 +142,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Nuevo"/>
         </properties>
       </component>
@@ -151,6 +152,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Exportar"/>
         </properties>
       </component>
@@ -160,23 +162,10 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Importar"/>
         </properties>
       </component>
-      <scrollpane id="a9c01">
-        <constraints>
-          <grid row="22" column="2" row-span="9" col-span="4" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
-        </constraints>
-        <properties/>
-        <border type="none"/>
-        <children>
-          <component id="ee6bb" class="javax.swing.JList" binding="list1" default-binding="true">
-            <constraints/>
-            <properties/>
-          </component>
-        </children>
-      </scrollpane>
       <component id="9565f" class="com.github.lgooddatepicker.components.DatePicker" binding="fechaCompraDPicker">
         <constraints>
           <grid row="12" column="2" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
@@ -193,15 +182,6 @@
           <text value="Observaciones"/>
         </properties>
       </component>
-      <component id="c7d2a" class="javax.swing.JTextArea" binding="observacionesTxtArea">
-        <constraints>
-          <grid row="16" column="2" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
-            <preferred-size width="150" height="50"/>
-          </grid>
-          <forms defaultalign-horz="false" defaultalign-vert="false"/>
-        </constraints>
-        <properties/>
-      </component>
       <component id="50ed4" class="javax.swing.JComboBox" binding="estadoComboBox">
         <constraints>
           <grid row="20" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
@@ -210,15 +190,6 @@
         <properties>
           <model/>
           <toolTipText value=""/>
-        </properties>
-      </component>
-      <component id="15e5a" class="javax.swing.JComboBox" binding="generoComboBox">
-        <constraints>
-          <grid row="8" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
-          <forms/>
-        </constraints>
-        <properties>
-          <model/>
         </properties>
       </component>
       <component id="e4e2e" class="javax.swing.JLabel">
@@ -263,6 +234,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Eliminar"/>
         </properties>
       </component>
@@ -281,6 +253,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Buscar"/>
         </properties>
       </component>
@@ -290,6 +263,7 @@
           <forms/>
         </constraints>
         <properties>
+          <font name="Caladea" size="15" style="1"/>
           <text value="Editar"/>
         </properties>
       </component>
@@ -299,6 +273,49 @@
           <forms defaultalign-horz="false" defaultalign-vert="false"/>
         </constraints>
         <properties/>
+      </component>
+      <scrollpane id="4a793">
+        <constraints>
+          <grid row="22" column="2" row-span="9" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <horizontalScrollBarPolicy value="31"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ee6bb" class="javax.swing.JList" binding="list1" default-binding="true">
+            <constraints/>
+            <properties/>
+          </component>
+        </children>
+      </scrollpane>
+      <scrollpane id="a37f9">
+        <constraints>
+          <grid row="16" column="2" row-span="1" col-span="3" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <forms defaultalign-horz="false" defaultalign-vert="false"/>
+        </constraints>
+        <properties>
+          <horizontalScrollBarPolicy value="31"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="c7d2a" class="javax.swing.JTextArea" binding="observacionesTxtArea">
+            <constraints/>
+            <properties>
+              <lineWrap value="true"/>
+            </properties>
+          </component>
+        </children>
+      </scrollpane>
+      <component id="15e5a" class="javax.swing.JComboBox" binding="generoComboBox">
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+          <forms/>
+        </constraints>
+        <properties>
+          <model/>
+        </properties>
       </component>
     </children>
   </grid>
